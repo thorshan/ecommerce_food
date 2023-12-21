@@ -24,26 +24,16 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    {{-- Navication Bar --}}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid px-5">
             <div class="nav-brand">
                 <strong class="text-primary fs-2">E<span class="text-light">commerce</span></strong>
             </div>
             <div>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Contact</a>
-                    </li>
-                </ul>
+                <input type="search" name="search" id="search"
+                    class="form-control outline-none border-secondary bg-transparent text-light">
             </div>
             <div>
                 <ul class="navbar-nav">
@@ -57,7 +47,8 @@
                     <li class="nav-item">
                         <img src="..."class="rounded me-2">
                         <div class="btn-group">
-                            <a type="submit" class="btn btn-transparent border-0 outline-none dropdown-toggle text-white-50"
+                            <a type="submit"
+                                class="btn btn-transparent border-0 outline-none dropdown-toggle text-white-50"
                                 data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                                 Username
                             </a>
@@ -73,6 +64,17 @@
     </nav>
 
     {{ $slot }}
+
+
+    {{-- Footer Section --}}
+    <footer class="bg-dark px-5 h-25 mt-3">
+        <div class="col">
+            <strong class="text-primary fs-2">E<span class="text-light">commerce</span></strong>
+        </div>
+        <div class="col">
+            <div class="text-white my-2">&copy; 2023 Ecommerce. All Rights Reserved.</div>
+        </div>
+    </footer>
 
     {{-- Bootstrap CDN Link --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
